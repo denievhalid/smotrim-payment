@@ -1,4 +1,4 @@
-# smotrim-2
+# Форма оплаты
 
 ## Project setup
 ```
