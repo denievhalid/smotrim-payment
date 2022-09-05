@@ -7,7 +7,7 @@
         :class="{
           'form__control--error': errors.firstName,
         }"
-        @input="onInput('firstName')"
+        @keypress="onInput('firstName')"
         maxlength="50"
         type="text"
         v-model.trim="firstName"
@@ -23,7 +23,7 @@
         :class="{
           'form__control--error': errors.lastName,
         }"
-        @input="onInput('lastName')"
+        @keypress="onInput('lastName')"
         maxlength="50"
         type="text"
         v-model.trim="lastName"
@@ -40,7 +40,7 @@
           :class="{
             'form__control--error': errors.cardNumber,
           }"
-          @input="onInput('cardNumber')"
+          @keypress="onInput('cardNumber')"
           mask="0000-0000-0000-0000"
           v-model="cardNumber"
         />
@@ -57,7 +57,7 @@
           :class="{
             'form__control--error': errors.cardExpiration,
           }"
-          @input="onInput('cardExpiration')"
+          @keypress="onInput('cardExpiration')"
           mask="00/0000"
           placeholder="мм/гггг"
           v-model="cardExpiration"
@@ -73,7 +73,7 @@
           :class="{
             'form__control--error': errors.cvcNumber,
           }"
-          @input="onInput('cvcNumber')"
+          @keypress="onInput('cvcNumber')"
           mask="000"
           v-model="cvcNumber"
         />
