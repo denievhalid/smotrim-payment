@@ -59,6 +59,7 @@
           }"
           @input="onInput('cardExpiration')"
           mask="00/0000"
+          placeholder="мм/гггг"
           v-model="cardExpiration"
         />
         <span class="form__error" v-if="errors.cardExpiration">
