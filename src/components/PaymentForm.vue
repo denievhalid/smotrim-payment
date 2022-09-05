@@ -76,6 +76,7 @@
           :class="{
             'form__control--error': errors.cvcNumber,
           }"
+          type="password"
           @keypress="onInput('cvcNumber')"
           mask="000"
           v-model="cvcNumber"
