@@ -1,6 +1,4 @@
-# Форма оплаты 
-
-https://prnt.sc/qsTDgWA6PICS
+# Форма оплаты
 
 ## Project setup
 ```
