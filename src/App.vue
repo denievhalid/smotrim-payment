@@ -1,30 +1,23 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="wrapper">
+    <h1 class="page-title">Форма оплаты</h1>
+    <PaymentSuccess v-if="payment" />
+    <template v-else>
+      <PaymentForm @submit="onSubmit" />
+    </template>
   </div>
-  <router-view/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script setup>
+import { PaymentForm } from "./components";
+import { ref } from "vue";
+import PaymentSuccess from "./components/PaymentSuccess";
 
-#nav {
-  padding: 30px;
+const payment = ref(false);
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+const onSubmit = (e) => {
+  payment.value = true;
+};
+</script>
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<style lang="scss" scoped></style>
