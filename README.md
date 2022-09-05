@@ -1,5 +1,7 @@
 # Форма оплаты 
 
+https://prnt.sc/qsTDgWA6PICS
+
 ## Project setup
 ```
 npm install
