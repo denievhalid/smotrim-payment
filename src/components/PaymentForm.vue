@@ -73,6 +73,7 @@
           :class="{
             'form__control--error': errors.cvcNumber,
           }"
+          @input="onInput('cvcNumber')"
           mask="000"
           v-model="cvcNumber"
         />
