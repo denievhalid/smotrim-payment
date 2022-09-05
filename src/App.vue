@@ -1,21 +1,21 @@
 <template>
   <div class="wrapper">
     <h1 class="page-title">Форма оплаты</h1>
+    <!-- Успешная отправка формы -->
     <PaymentSuccess v-if="payment" />
-    <template v-else>
-      <PaymentForm @submit="onSubmit" />
-    </template>
+    <!-- Форма оплаты -->
+    <PaymentForm @submit="onSubmit" v-else />
   </div>
 </template>
 
 <script setup>
-import { PaymentForm } from "./components";
 import { ref } from "vue";
+import { PaymentForm } from "./components";
 import PaymentSuccess from "./components/PaymentSuccess";
 
 const payment = ref(false);
 
-const onSubmit = (e) => {
+const onSubmit = () => {
   payment.value = true;
 };
 </script>
