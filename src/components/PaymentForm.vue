@@ -204,6 +204,7 @@ const onSubmit = () => {
     display: block;
     outline: none;
     transition: border 0.1s ease-out;
+    font-size: 14px;
 
     &--error {
       border-color: red;
