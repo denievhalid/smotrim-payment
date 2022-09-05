@@ -11,6 +11,7 @@
     "vue": "^3.0.0",
     "vue-imask": "^6.4.2",
     "vue-router": "^4.0.0-0",
+    "vue3-simple-svg": "^1.0.0",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {

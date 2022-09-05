@@ -41,9 +41,12 @@
             'form__control--error': errors.cardNumber,
           }"
           @keypress="onInput('cardNumber')"
-          mask="0000-0000-0000-0000"
+          mask="0000 0000 0000 0000"
           v-model="cardNumber"
         />
+        <div class="form__card-type" v-if="cardIcon">
+          <simple-svg :src="cardIcon" width="38" />
+        </div>
         <span class="form__error" v-if="errors.cardNumber">
           {{ errors.cardNumber }}
         </span>
@@ -122,6 +125,20 @@ const expiration = computed({
   set(newValue) {},
 });
 const cvcNumber = ref(null);
+const cardIcon = computed(() => {
+  const firstNumber = +cardNumber.value?.charAt(0);
+
+  switch (firstNumber) {
+    case 2:
+      return require("../icons/mir.svg");
+    case 4:
+      return require("../icons/visa.svg");
+    case 5:
+      return require("../icons/master.svg");
+    default:
+      return null;
+  }
+});
 
 const emit = defineEmits(["submit"]);
 
@@ -210,6 +227,12 @@ const onSubmit = () => {
     &--error {
       border-color: red;
     }
+  }
+
+  &__card-type {
+    position: absolute;
+    right: 12px;
+    top: 8px;
   }
 
   .form__icon {
