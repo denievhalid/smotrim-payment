@@ -210,10 +210,6 @@ const onSubmit = () => {
     &--error {
       border-color: red;
     }
-
-    &:focus {
-      border-color: #cbd0d4;
-    }
   }
 
   .form__icon {
